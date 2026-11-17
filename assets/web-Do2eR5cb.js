@@ -1,0 +1,2 @@
+class AppWeb{constructor(){return new Proxy(this,{get:(t,k)=>{if(k in t||typeof k==="symbol"||k==="then")return t[k];if(k==="addListener")return async()=>({remove:async()=>{}});if(k==="checkPermissions"||k==="requestPermissions")return async()=>({display:"denied"});if(k==="getPending")return async()=>({notifications:[]});if(k==="getInfo")return async()=>({name:"Codex Study",id:"web",build:"1",version:"1.0.0"});if(k==="getState")return async()=>({isActive:true});return async()=>({})}})}}
+export{AppWeb};
